@@ -1,0 +1,33 @@
+#THIS HAS THE NODE SELECTOR REFERENCE 
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java-app
+  labels:
+    app: java-app
+    component: web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: java-app
+      component: web
+  template:
+    metadata:
+      labels:
+        app: java-app
+        component: web
+    spec:
+      containers:
+      - name: java-app
+        image: vfarcic/devops-toolkit-series
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 1000m
+            memory: 1Gi
+      nodeSelector:
+        topology.kubernetes.io/zone: ap-southeast-1c
+        category: stage
