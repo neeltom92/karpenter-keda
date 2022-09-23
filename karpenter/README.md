@@ -1,6 +1,6 @@
 # Installation and Configuration
 
-1. requires some changes for the proper set up :
+1. requires some changes for the proper set up,its better used with EKSCTL :
 
 - https://gist.github.com/vfarcic/2dad051fe41bd2bbcf94eda74386ce49
 - https://www.middlewareinventory.com/blog/creating-eks-cluster-with-karpenter-auto-scaling-terraform-kubernetes/
