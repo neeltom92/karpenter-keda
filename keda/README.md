@@ -6,3 +6,5 @@ this installation is referred from : https://gist.github.com/vfarcic/2dad051fe41
 as KEDA manages 0 <-> 1 and HPA 1 <-> N scaling
 3. so if there are 4 pods (scale down to 1 will happen after 15 mins only(4*5-5) )
 4. attached a sample deployment and keda for CPU file.
+5. The Keda should be namespace scoped!!
+- "kubectl --namespace production apply --filename sample-deployment.yaml"
